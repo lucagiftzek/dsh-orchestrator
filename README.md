@@ -1,10 +1,13 @@
 # dsh-orchestrator
 
+[![npm](https://img.shields.io/npm/v/%40lucagiftzek%2Fdsh-orchestrator?label=npm)](https://www.npmjs.com/package/@lucagiftzek/dsh-orchestrator)
+
 Spawn, prompt and track agent chats and tasks from one Orchestrate tab, with orch_* tools and runners.
 
 ```bash
 dsh plugin --profile web add dsh-better-sidebar   # the tab host, skip if installed
-dsh plugin --profile web add github:lucagiftzek/dsh-orchestrator
+dsh plugin --profile web add @lucagiftzek/dsh-orchestrator
+# or from GitHub: dsh plugin --profile web add github:lucagiftzek/dsh-orchestrator
 # restart dsh web, then open the Orchestrate tab
 ```
 
@@ -44,8 +47,11 @@ Everything is **settings-driven**: runners, providers, presets, limits and the A
 
 Requires DSH >= 0.1.1-rc.1, Node >= 22.5, the `web` profile, and dsh-better-sidebar (the tab host).
 
+Install from npm: `dsh plugin --profile web add @lucagiftzek/dsh-orchestrator`, or from GitHub: `dsh plugin --profile web add github:lucagiftzek/dsh-orchestrator`.
+
 ```sh
-dsh plugin --profile web add github:lucagiftzek/dsh-orchestrator
+dsh plugin --profile web add @lucagiftzek/dsh-orchestrator
+# or from GitHub: dsh plugin --profile web add github:lucagiftzek/dsh-orchestrator
 ```
 
 The package declares `dsh.bundle`, so `dsh plugin add` lists it in `dsh.profile.bundles`. From a checkout instead:

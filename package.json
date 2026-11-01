@@ -1,5 +1,5 @@
 {
-  "name": "dsh-orchestrator",
+  "name": "@lucagiftzek/dsh-orchestrator",
   "version": "0.1.1",
   "description": "Agent swarm and task orchestration for DeepSeek Harness: an Orchestrate sidebar tab and orch_* tools to spawn, prompt and fork agent chats, run command, scrape, http and agent tasks on local, ssh or remote runners, provider status cards, and a secret-protected machine API.",
   "type": "module",
@@ -16,7 +16,9 @@
     "cordis.patch.yml",
     "docs",
     "lib",
-    "scripts"
+    "scripts",
+    "!lib/**/*.map",
+    "!lib/*.map"
   ],
   "scripts": {
     "check": "for f in lib/core.js lib/security.js lib/store.js lib/runners.js lib/agents.js lib/tasks.js lib/providers.js lib/tools.js lib/lossless.js lib/api.js lib/dual-settings.js lib/index.js scripts/build.mjs test/run.mjs test/lossless.mjs test/client.mjs test/dual.mjs; do node --check $f || exit 1; done && echo 'all files OK'",
@@ -77,5 +79,8 @@
   "homepage": "https://github.com/lucagiftzek/dsh-orchestrator#readme",
   "bugs": {
     "url": "https://github.com/lucagiftzek/dsh-orchestrator/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

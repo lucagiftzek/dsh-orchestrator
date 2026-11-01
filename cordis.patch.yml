@@ -8,7 +8,7 @@
 # extension point, plus a Settings-page section through ctx.slots.
 #
 # Install (any host):
-#   1. add  "dsh-orchestrator": "link:/path/to/dsh-orchestrator"
+#   1. add  "@lucagiftzek/dsh-orchestrator": "link:/path/to/dsh-orchestrator"
 #      (or the npm/github form you prefer) to ~/.dsh/profiles/web/package.json
 #      `dependencies`
 #   2. append  dsh-orchestrator  to `dsh.profile.bundles`
@@ -23,4 +23,4 @@
 #   DSH_ORCHESTRATOR_DISABLE=1 in the dsh-web environment (read at apply time).
 - insert:
     - id: dsh-orchestrator
-      name: 'dsh-orchestrator'
+      name: '@lucagiftzek/dsh-orchestrator'

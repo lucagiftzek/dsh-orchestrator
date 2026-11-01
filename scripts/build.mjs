@@ -18,7 +18,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const ID = 'dsh-orchestrator'
+const ID = '@lucagiftzek/dsh-orchestrator'
 
 /** Platform seed words the shell shares into the module table. */
 const CLIENT_EXTERNALS = ['react']

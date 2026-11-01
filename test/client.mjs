@@ -113,7 +113,7 @@ const src = fsSync.readFileSync(new URL('../lib/client.js', import.meta.url), 'u
 dom.window.__ModuleLoader__ = { load: (pkg) => { dom.window.__loaded = pkg } }
 new Function('window', 'document', 'location', 'fetch', src)(dom.window, dom.window.document, dom.window.location, (url, init) => fetchImpl.fn(url, init))
 assert.ok(dom.window.__loaded, '__ModuleLoader__.load was called')
-assert.equal(dom.window.__loaded.id, 'dsh-orchestrator')
+assert.equal(dom.window.__loaded.id, '@lucagiftzek/dsh-orchestrator')
 
 const cache = new Map([['react', React]])
 const plugin = dom.window.__loaded.factory((id) => {
