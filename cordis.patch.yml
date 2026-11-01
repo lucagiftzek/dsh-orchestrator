@@ -1,0 +1,26 @@
+# dsh-orchestrator bundle patch.
+#
+# Inserts ONE host row so the composition mounts this package. The node half
+# (exports ".") registers the agent-facing tools, the settings namespace
+# dsh-orchestrator, and the JSON route at /dsh-orchestrator/api. The browser
+# half (lib/client.js, declared through package.json dsh.client) registers the
+# "Orchestrate" tab on dsh-better-sidebar's public ctx.betterSidebar.registerTab
+# extension point, plus a Settings-page section through ctx.slots.
+#
+# Install (any host):
+#   1. add  "dsh-orchestrator": "link:/path/to/dsh-orchestrator"
+#      (or the npm/github form you prefer) to ~/.dsh/profiles/web/package.json
+#      `dependencies`
+#   2. append  dsh-orchestrator  to `dsh.profile.bundles`
+#   3. pnpm install  in ~/.dsh/profiles/web
+#   4. restart dsh-web  (the client half of this row mounts live; the host
+#      half: tools, settings namespace, API route, needs the restart)
+#
+# KILL SWITCH without uninstalling: add to ~/.dsh/profiles/web/cordis.patch.yml
+#     - id: dsh-orchestrator
+#       disabled: true
+#   and restart dsh-web. Runtime kill switch without a restart:
+#   DSH_ORCHESTRATOR_DISABLE=1 in the dsh-web environment (read at apply time).
+- insert:
+    - id: dsh-orchestrator
+      name: 'dsh-orchestrator'
